@@ -1,0 +1,29 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Unity asset meta files (keep these — they're important)
+# *.meta  <-- do NOT ignore these
+
+# Visual Studio / Rider
+.vs/
+*.sln
+*.csproj
+*.user
+*.pidb
+*.suo
+*.tmp
+
+# OS garbage
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+
+# JetBrains Rider
+.idea/
