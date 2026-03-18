@@ -1,0 +1,77 @@
+[33mcommit 83b0eae505976c9a34ce5ef214a93353e4d5d3cb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Lynn <haag.lynn1703@gmail.com>
+Date:   Mon Mar 16 23:48:21 2026 +0100
+
+    initial unity project
+
+ .vsconfig                                          |    6 [32m+[m
+ Assets/InputSystem_Actions.inputactions            | 1057 [32m++++++++++++++++++++[m
+ Assets/InputSystem_Actions.inputactions.meta       |   14 [32m+[m
+ Assets/Readme.asset                                |   34 [32m+[m
+ Assets/Readme.asset.meta                           |    8 [32m+[m
+ Assets/Scenes.meta                                 |    8 [32m+[m
+ Assets/Scenes/SampleScene.unity                    |  432 [32m++++++++[m
+ Assets/Scenes/SampleScene.unity.meta               |    7 [32m+[m
+ Assets/Settings.meta                               |    8 [32m+[m
+ Assets/Settings/DefaultVolumeProfile.asset         |  982 [32m++++++++++++++++++[m
+ Assets/Settings/DefaultVolumeProfile.asset.meta    |    8 [32m+[m
+ Assets/Settings/Mobile_RPAsset.asset               |  135 [32m+++[m
+ Assets/Settings/Mobile_RPAsset.asset.meta          |    8 [32m+[m
+ Assets/Settings/Mobile_Renderer.asset              |   52 [32m+[m
+ Assets/Settings/Mobile_Renderer.asset.meta         |    8 [32m+[m
+ Assets/Settings/PC_RPAsset.asset                   |  135 [32m+++[m
+ Assets/Settings/PC_RPAsset.asset.meta              |    8 [32m+[m
+ Assets/Settings/PC_Renderer.asset                  |   95 [32m++[m
+ Assets/Settings/PC_Renderer.asset.meta             |    8 [32m+[m
+ Assets/Settings/SampleSceneProfile.asset           |  159 [32m+++[m
+ Assets/Settings/SampleSceneProfile.asset.meta      |    8 [32m+[m
+ .../UniversalRenderPipelineGlobalSettings.asset    |  355 [32m+++++++[m
+ ...niversalRenderPipelineGlobalSettings.asset.meta |    8 [32m+[m
+ Assets/TutorialInfo.meta                           |    8 [32m+[m
+ Assets/TutorialInfo/Icons.meta                     |    9 [32m+[m
+ Assets/TutorialInfo/Icons/URP.png                  |  Bin [31m0[m -> [32m24069[m bytes
+ Assets/TutorialInfo/Icons/URP.png.meta             |  134 [32m+++[m
+ Assets/TutorialInfo/Layout.wlt                     |  654 [32m++++++++++++[m
+ Assets/TutorialInfo/Layout.wlt.meta                |    8 [32m+[m
+ Assets/TutorialInfo/Scripts.meta                   |    9 [32m+[m
+ Assets/TutorialInfo/Scripts/Editor.meta            |    9 [32m+[m
+ Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs |  242 [32m+++++[m
+ .../Scripts/Editor/ReadmeEditor.cs.meta            |   12 [32m+[m
+ Assets/TutorialInfo/Scripts/Readme.cs              |   16 [32m+[m
+ Assets/TutorialInfo/Scripts/Readme.cs.meta         |   12 [32m+[m
+ Packages/manifest.json                             |   47 [32m+[m
+ Packages/packages-lock.json                        |  464 [32m+++++++++[m
+ ProjectSettings/AudioManager.asset                 |   19 [32m+[m
+ ProjectSettings/ClusterInputManager.asset          |    6 [32m+[m
+ ProjectSettings/DynamicsManager.asset              |   36 [32m+[m
+ ProjectSettings/EditorBuildSettings.asset          |   13 [32m+[m
+ ProjectSettings/EditorSettings.asset               |   49 [32m+[m
+ ProjectSettings/GraphicsSettings.asset             |   70 [32m++[m
+ ProjectSettings/InputManager.asset                 |  487 [32m+++++++++[m
+ ProjectSettings/MemorySettings.asset               |   35 [32m+[m
+ ProjectSettings/MultiplayerManager.asset           |    7 [32m+[m
+ ProjectSettings/NavMeshAreas.asset                 |   91 [32m++[m
+ ProjectSettings/PackageManagerSettings.asset       |   43 [32m+[m
+ ProjectSettings/Physics2DSettings.asset            |   56 [32m++[m
+ ProjectSettings/PresetManager.asset                |    7 [32m+[m
+ ProjectSettings/ProjectSettings.asset              |  936 [32m+++++++++++++++++[m
+ ProjectSettings/ProjectVersion.txt                 |    2 [32m+[m
+ ProjectSettings/QualitySettings.asset              |  134 [32m+++[m
+ ProjectSettings/ShaderGraphSettings.asset          |   19 [32m+[m
+ ProjectSettings/TagManager.asset                   |   76 [32m++[m
+ ProjectSettings/TimeManager.asset                  |    9 [32m+[m
+ ProjectSettings/URPProjectSettings.asset           |   15 [32m+[m
+ ProjectSettings/UnityConnectSettings.asset         |   36 [32m+[m
+ ProjectSettings/VFXManager.asset                   |   12 [32m+[m
+ ProjectSettings/VersionControlSettings.asset       |    8 [32m+[m
+ ProjectSettings/XRSettings.asset                   |   10 [32m+[m
+ 61 files changed, 7343 insertions(+)
+
+[33mcommit 084f5750a53655673f9947b9c9aff3b8c12f46c3[m
+Author: Lynn <haag.lynn1703@gmail.com>
+Date:   Mon Mar 16 23:30:18 2026 +0100
+
+    add gitignore
+
+ .gitignore | 29 [32m+++++++++++++++++++++++++++++[m
+ 1 file changed, 29 insertions(+)
