@@ -11,9 +11,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameEnded) return;
-
         timer += Time.deltaTime;
-
         if (timer >= rideDuration)
         {
             EndGame();
@@ -23,14 +21,13 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameEnded = true;
-
         if (batteryManager.currentBattery > 50f)
         {
-            Debug.Log("WIN - Du bist ein Zombie!");
+            SceneManager.LoadScene("WinScene");
         }
         else
         {
-            Debug.Log("LOSE - Du hast widerstanden!");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }

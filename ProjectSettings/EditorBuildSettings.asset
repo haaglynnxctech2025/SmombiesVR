@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: dc041f01d5c1570489ea3fca8412c467
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: ad359568811108c4f8dd03e9264715b9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e4070444ed4dd314987a8be2a1928cff, type: 2}

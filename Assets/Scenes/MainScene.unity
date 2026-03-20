@@ -519,7 +519,7 @@ MonoBehaviour:
   batteryFill: {fileID: 543803345}
   maxBattery: 100
   currentBattery: 100
-  drainRate: 2
+  drainRate: 10
 --- !u!4 &351099962
 Transform:
   m_ObjectHideFlags: 0
