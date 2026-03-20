@@ -21,9 +21,14 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameEnded = true;
+
         if (batteryManager.currentBattery > 50f)
         {
             SceneManager.LoadScene("WinScene");
+        }
+        else if (batteryManager.currentBattery > 0f)
+        {
+            SceneManager.LoadScene("SmombieScene");
         }
         else
         {

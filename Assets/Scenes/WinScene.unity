@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Du bist jetzt ein Smombie.
+  m_text: Du bist jetzt ein Zombie.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -539,8 +539,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Du hast die ganze Fahrt auf dein Handy gestarrt.
 
-    Willkommen in der
-    Herde.'
+    Und dich selbst
+    dabei verloren.
+
+
+    Willkommen in der Herde.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
