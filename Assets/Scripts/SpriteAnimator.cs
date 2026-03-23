@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class SpriteAnimator : MonoBehaviour
 {
+    [Header("Frames")]
     public Texture2D[] frames;
     public float framesPerSecond = 8f;
+
+    [Header("Settings")]
+    public bool autoAnimate = true;
+
     private Material mat;
     private int currentFrame = 0;
     private float timer = 0f;
@@ -17,14 +22,21 @@ public class SpriteAnimator : MonoBehaviour
 
     void Update()
     {
+        if (!autoAnimate) return;
         if (frames.Length == 0) return;
 
         timer += Time.deltaTime;
         if (timer >= 1f / framesPerSecond)
         {
             timer = 0f;
-            currentFrame = (currentFrame + 1) % frames.Length;
-            mat.SetTexture("_BaseMap", frames[currentFrame]);
+            AdvanceFrame();
         }
+    }
+
+    public void AdvanceFrame()
+    {
+        if (frames.Length == 0) return;
+        currentFrame = (currentFrame + 1) % frames.Length;
+        mat.SetTexture("_BaseMap", frames[currentFrame]);
     }
 }
