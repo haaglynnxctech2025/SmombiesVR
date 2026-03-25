@@ -17,7 +17,10 @@ public class SpriteAnimator : MonoBehaviour
     {
         mat = GetComponent<Renderer>().material;
         if (frames.Length > 0)
+        {
             mat.SetTexture("_BaseMap", frames[0]);
+            mat.SetTexture("_MainTex", frames[0]);
+        }
     }
 
     void Update()
@@ -38,5 +41,6 @@ public class SpriteAnimator : MonoBehaviour
         if (frames.Length == 0) return;
         currentFrame = (currentFrame + 1) % frames.Length;
         mat.SetTexture("_BaseMap", frames[currentFrame]);
+        mat.SetTexture("_MainTex", frames[currentFrame]);
     }
 }
