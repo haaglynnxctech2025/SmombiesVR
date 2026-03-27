@@ -22,17 +22,17 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = true;
 
-        if (batteryManager.currentBattery > 50f)
+        if (batteryManager.currentBattery <= 0f)
+        {
+            SceneManager.LoadScene("LoseScene");
+        }
+        else if (batteryManager.currentBattery > 95f)
         {
             SceneManager.LoadScene("WinScene");
         }
-        else if (batteryManager.currentBattery > 0f)
-        {
-            SceneManager.LoadScene("SmombieScene");
-        }
         else
         {
-            SceneManager.LoadScene("LoseScene");
+            SceneManager.LoadScene("SmombieScene");
         }
     }
 }

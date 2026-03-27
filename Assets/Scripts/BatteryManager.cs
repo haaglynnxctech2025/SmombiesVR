@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class BatteryManager : MonoBehaviour
 {
@@ -8,34 +7,22 @@ public class BatteryManager : MonoBehaviour
     public float maxBattery = 100f;
     public float currentBattery = 100f;
     public float drainRate = 10f;
-    private bool batteryDead = false;
 
-    // Color thresholds
     private Color colorGreen = new Color(0f, 1f, 0f);
     private Color colorYellow = new Color(1f, 0.8f, 0f);
     private Color colorRed = new Color(1f, 0f, 0f);
 
     void Update()
     {
-        if (batteryDead) return;
-
         currentBattery -= drainRate * Time.deltaTime;
         currentBattery = Mathf.Clamp(currentBattery, 0f, maxBattery);
         batteryFill.fillAmount = currentBattery / maxBattery;
-
         UpdateBatteryColor();
-
-        if (currentBattery <= 0f)
-        {
-            batteryDead = true;
-            SceneManager.LoadScene("LoseScene");
-        }
     }
 
     void UpdateBatteryColor()
     {
         float percent = currentBattery / maxBattery;
-
         if (percent > 0.5f)
         {
             float t = (percent - 0.5f) * 2f;
@@ -50,13 +37,12 @@ public class BatteryManager : MonoBehaviour
 
     public void AddBattery(float amount)
     {
-        if (batteryDead) return;
         currentBattery += amount;
         currentBattery = Mathf.Clamp(currentBattery, 0f, maxBattery);
     }
 
     public bool IsDead()
     {
-        return batteryDead;
+        return currentBattery <= 0f;
     }
 }
