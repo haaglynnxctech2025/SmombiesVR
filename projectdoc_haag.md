@@ -1,4 +1,4 @@
-# Smombies & Zombies — A Virtual Train Ride
+git ad# Smombies & Zombies — A Virtual Train Ride
 ### Final Project Documentation — CTech Lab I
 **Lynn Haag | Berlin, March 2026**
 
@@ -243,7 +243,7 @@ The core MVP was functional by week four. The final features (ZombieDialog, phon
 ### Option 1 — Source Files (GitHub)
 
 The complete Unity project is available at:
-**[github.com/YOUR_USERNAME/SmombiesVR]** *(make repo public before submission)*
+**[github.com/haaglynnxctech2025/SmombiesVR]** 
 
 The repository contains all Unity source files, C# scripts, assets, and scene files needed to open and build the project in Unity 6 (6000.0.62f1 LTS).
 
@@ -265,22 +265,6 @@ To install:
 3. Connect Quest 3 via USB-C
 4. Drag APK onto SideQuest
 5. Find the app under Unknown Sources in the headset
-
----
-
-## Making the GitHub Repository Public
-
-Yes — the simplest way to share source files with your professor is to make the repository public on GitHub:
-
-1. Go to **github.com/YOUR_USERNAME/SmombiesVR**
-2. Click **Settings** (top right of repo)
-3. Scroll down to **Danger Zone**
-4. Click **Change visibility → Make public**
-5. Confirm
-
-Your professor can then browse all source files, scripts, and scenes directly in the browser without needing Unity installed.
-
-Alternatively, you can submit a **.zip** of the entire project folder (excluding the `Library/` folder — it's auto-generated and huge) via the university upload portal.
 
 ---
 
