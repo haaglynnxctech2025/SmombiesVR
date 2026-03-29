@@ -21,7 +21,7 @@ public class DecisionManager : MonoBehaviour
         UnityEngine.XR.InputDevice rightHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(UnityEngine.XR.XRNode.RightHand);
         if (rightHand.isValid)
         {
-            // Trigger → keep scrolling → WinScene
+           
             rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool triggerPressed);
             if (triggerPressed && !triggerWasPressed)
             {
@@ -30,7 +30,7 @@ public class DecisionManager : MonoBehaviour
             }
             triggerWasPressed = triggerPressed;
 
-            // Thumbstick → resist → LoseScene
+         
             rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out Vector2 thumbstick);
             bool thumbstickActive = thumbstick.magnitude > thumbstickThreshold;
             if (thumbstickActive && !thumbstickWasActive)
@@ -41,7 +41,7 @@ public class DecisionManager : MonoBehaviour
             thumbstickWasActive = thumbstickActive;
         }
 
-        // PC testing
+     
         if (Keyboard.current != null)
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)

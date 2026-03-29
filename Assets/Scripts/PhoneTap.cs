@@ -39,7 +39,7 @@ public class PhoneTap : MonoBehaviour
     {
         thumbstickCooldown -= Time.deltaTime;
 
-        // PC keyboard
+        
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Tap(tapAmount);
@@ -48,7 +48,7 @@ public class PhoneTap : MonoBehaviour
         UnityEngine.XR.InputDevice rightHand = UnityEngine.XR.InputDevices.GetDeviceAtXRNode(UnityEngine.XR.XRNode.RightHand);
         if (rightHand.isValid)
         {
-            // Trigger
+            
             rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool triggerPressed);
             if (triggerPressed && !triggerWasPressed)
             {
@@ -56,7 +56,7 @@ public class PhoneTap : MonoBehaviour
             }
             triggerWasPressed = triggerPressed;
 
-            // Thumbstick — langsameres Steigen
+            
             rightHand.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out Vector2 thumbstick);
             bool thumbstickActive = thumbstick.magnitude > thumbstickThreshold;
             if (thumbstickActive && thumbstickCooldown <= 0f)
@@ -66,7 +66,7 @@ public class PhoneTap : MonoBehaviour
             }
         }
 
-        // Gaze auf Handy → Battery steigt langsam
+        
         if (IsLookingAtPhone())
         {
             batteryManager.currentBattery += gazeChargeRate * Time.deltaTime;
@@ -76,7 +76,7 @@ public class PhoneTap : MonoBehaviour
                 batteryManager.maxBattery
             );
         }
-        // Gaze weggeschaut → Battery sinkt schneller
+        
         else if (!IsLookingAtPhone())
         {
             batteryManager.currentBattery -= gazeDrainBoost * Time.deltaTime;

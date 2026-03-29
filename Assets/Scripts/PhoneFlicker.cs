@@ -42,21 +42,21 @@ public class PhoneFlicker : MonoBehaviour
                 flickerTimer = 0f;
                 isRed = !isRed;
 
-                // Phone Screen blinkt rot
+                
                 if (phoneMat != null)
                 {
                     phoneMat.color = isRed
                         ? new Color(1f, 0f, 0f, 1f)
                         : Color.white;
 
-                    // Emission für leuchtendes Rot
+                    
                     phoneMat.SetColor("_EmissionColor",
                         isRed
                         ? new Color(3f, 0f, 0f, 1f)
                         : Color.black);
                 }
 
-                // Battery Bar blinkt auch rot
+                
                 if (batteryFill != null)
                     batteryFill.color = isRed
                         ? new Color(1f, 0f, 0f, 1f)

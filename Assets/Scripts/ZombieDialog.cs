@@ -82,7 +82,7 @@ public class ZombieDialog : MonoBehaviour
 
     public void SetActive(bool active)
     {
-        // Nur ausführen wenn sich der Status wirklich ändert!
+        
         if (active == wasActive) return;
         wasActive = active;
         isActive = active;
