@@ -1,5 +1,5 @@
 git ad# Smombies & Zombies — A Virtual Train Ride
-### Final Project Documentation — CTech Lab I
+### Final Project Documentation — 
 **Lynn Haag | Berlin, March 2026**
 
 ---
@@ -272,4 +272,4 @@ To install:
 
 ---
 
-**Lynn Haag | CTech Lab I | Submission March 2026**
+**Lynn Haag | Submission March 2026**
