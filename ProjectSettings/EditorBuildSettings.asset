@@ -21,6 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SmombieScene.unity
     guid: d2ed352b99729bc4496280ebcac4cb27
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 822e9f8fb47f79d44a32afd0069e2f8c, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e4070444ed4dd314987a8be2a1928cff, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: da01b957080af0647a7ab8280f82bf40, type: 2}
