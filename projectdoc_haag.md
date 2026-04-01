@@ -20,6 +20,8 @@ Except you don't. At the end of the ride, you realise you have become one of the
 
 **"Don't you dare to look up from your phone."**
 
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/SCROLL.png)
+
 The project is built entirely in **Unity 6 (6000.0.62f1 LTS)** for **Meta Quest 3**, running as a standalone Android APK. The core stack is:
 
 - **Unity 6 + OpenXR / Oculus XR Plugin** — VR rendering and headset integration
@@ -33,6 +35,7 @@ The scene consists of a single S-Bahn wagon with scrolling city textures outside
 
 The game logic is built around a single variable — the battery level — which is drained over time, affected by gaze logic (looking at zombies drains it faster, looking at the phone partially restores it), and recharged by pressing the trigger or moving the thumbstick. At the end of the ride, the game checks the battery level and routes to one of three endings: Win (Zombie), Smombie (Half), or Lose (Resisted).
 
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/GameMechanic.png)
 ---
 
 ## Context and Related Work
@@ -52,6 +55,7 @@ Related creative reference points include:
 - **Hito Steyerl's "In Free Fall"** — the smartphone screen as a new floor of reality
 
 ---
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Smombieszene.png)
 
 ## Results
 
@@ -77,12 +81,15 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - Gaze logic: zombies slowly approach when looked at, retreat when ignored
 - ZombieDialog system: closest zombie shows animated text dialogue at 1.5m proximity
 - Aggressive vs. normal animation frames triggered by distance
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/MALE.png)
 
 **Phone interaction:**
 - Custom 3D phone model (Blender)
 - World-space canvas with scrolling social media feed (83-frame PNG animation)
 - Phone flicker effect (red glow) when battery drops below 20%
 - First-person hand model (Blender, static pose)
+
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/PHONE.png)
 
 **UI and flow:**
 - Start scene with countdown (15s) and trigger-to-start
