@@ -265,7 +265,7 @@ To run in the Unity Editor:
 
 ### Option 3 — Find .APK file on OwnCloud
 
-[Find.APK] https://owncloud.gwdg.de/index.php/s/lkqKy0FHnFErEiY
+[Find.APK](https://owncloud.gwdg.de/index.php/s/lkqKy0FHnFErEiY)
 
 ### Option 4 — Or just watch the Demo on YouTube!
 
