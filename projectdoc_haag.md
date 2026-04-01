@@ -9,7 +9,7 @@ git ad# Smombies & Zombies — A Virtual Train Ride
 **Smombies & Zombies** — *A Virtual Train Ride*
 
 ---
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Endszene.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/Endszene.png)
 
 
 ## Description of Content and Technical Implementation
@@ -20,7 +20,7 @@ Except you don't. At the end of the ride, you realise you have become one of the
 
 **"Don't you dare to look up from your phone."**
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/SCROLL.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/SCROLL.png)
 
 The project is built entirely in **Unity 6 (6000.0.62f1 LTS)** for **Meta Quest 3**, running as a standalone Android APK. The core stack is:
 
@@ -35,7 +35,7 @@ The scene consists of a single S-Bahn wagon with scrolling city textures outside
 
 The game logic is built around a single variable — the battery level — which is drained over time, affected by gaze logic (looking at zombies drains it faster, looking at the phone partially restores it), and recharged by pressing the trigger or moving the thumbstick. At the end of the ride, the game checks the battery level and routes to one of three endings: Win (Zombie), Smombie (Half), or Lose (Resisted).
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/GameMechanic.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/GameMechanic.png)
 ---
 
 ## Context and Related Work
@@ -55,13 +55,15 @@ Related creative reference points include:
 - **Hito Steyerl's "In Free Fall"** — the smartphone screen as a new floor of reality
 - **Gorillaz "Clint Eastwood"** — This sond and the fictional characters that the band uses in a lot of different songs, served as really important inspirtion for my Zombies, also the music and the vibe I found fitted the world of the game and a Berlin street undergraound narrative of the 2000's!
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Gorillaz_Inspo.png)
 ---
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Smombieszene.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/Gorillaz_Inspo.png)
+---
 
 ## Results
 
 ### What was built
+
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/Smombieszene.png)
 
 The final deliverable is a functional standalone VR experience playable on Meta Quest 3:
 
@@ -86,7 +88,7 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 
 ---
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/MALE.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/MALE.png)
 
 ---
 
@@ -96,7 +98,7 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - Phone flicker effect (red glow) when battery drops below 20%
 - First-person hand model (Blender, static pose)
 ---
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/PHONE.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/PHONE.png)
 ---
 
 **UI and flow:**
@@ -147,7 +149,7 @@ If I were to continue developing this project:
 - A companion app for the phone itself, blurring the boundary between the game and the player's real device
 
 ---
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/trainview.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/img/trainview.png)
 ---
 ## Project Documentation
 
