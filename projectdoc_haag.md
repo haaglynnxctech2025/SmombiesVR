@@ -9,6 +9,8 @@ git ad# Smombies & Zombies — A Virtual Train Ride
 **Smombies & Zombies** — *A Virtual Train Ride*
 
 ---
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Endszene.png)
+
 
 ## Description of Content and Technical Implementation
 
