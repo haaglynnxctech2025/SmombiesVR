@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smombies & Zombies — A Virtual S-Bahn Ride</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+ 
   <style>
     :root {
-      --red: #ff2d2d;
-      --dark-red: #8b0000;
-      --green: #00ff88;
+      --red: #9b59b6;
+      --dark-red: #6c3483;
+      --green: #7da0ff;
       --black: #0a0a0a;
       --grey: #1a1a1a;
       --light-grey: #2a2a2a;
@@ -47,7 +48,7 @@
       position: fixed;
       width: 40px;
       height: 40px;
-      border: 1px solid rgba(0, 255, 136, 0.4);
+      border: 1px solid rgba(245, 94, 212, 0.555);
       border-radius: 50%;
       pointer-events: none;
       z-index: 9998;
@@ -118,21 +119,26 @@
       animation: fadeUp 0.8s ease 0.3s forwards;
     }
 
-    .hero-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(5rem, 15vw, 14rem);
-      line-height: 0.85;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      opacity: 0;
-      animation: fadeUp 0.8s ease 0.5s forwards;
-    }
-
-    .hero-title .amp {
-      color: var(--red);
-      display: inline-block;
-      animation: flicker 4s ease 2s infinite;
-    }
+  .hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 10vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  opacity: 0;
+  display: inline-block;
+  animation: fadeUpRotate 0.8s ease 0.5s forwards;
+}
+.hero-title .amp {
+  color: var(--red);
+  display: inline-block;
+  animation: flicker 4s ease 0.2s infinite;
+  text-shadow:
+    0 0 10px #9b59b6,
+    0 0 20px #9b59b6,
+    0 0 40px #9b59b6,
+    0 0 80px #6c3483;
+}
 
     .hero-subtitle {
       font-family: 'Space Mono', monospace;
@@ -217,7 +223,7 @@
       height: 100%;
       width: 0%;
       border-radius: 3px;
-      background: linear-gradient(90deg, var(--red), #ff6b6b);
+      background: linear-gradient(90deg, var(--red), #6d38ff);
       animation: batteryDrain 8s ease 2s infinite;
     }
 
@@ -375,17 +381,23 @@
       margin-left: 6px;
     }
 
-    .video-placeholder p {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
+  .video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('Endszene.png') center center / cover no-repeat;
+}
 
     /* ── ENDINGS ── */
     .endings {
       border-top: 1px solid var(--light-grey);
+      padding-top: 5rem;
     }
 
     .endings-grid {
@@ -422,11 +434,11 @@
     }
 
     .ending-card.win::before { background: var(--red); }
-    .ending-card.smombie::before { background: #9b59b6; }
+    .ending-card.smombie::before { background: #023dff; }
     .ending-card.lose::before { background: #2980b9; }
 
     .ending-card:hover.win { border-color: var(--red); }
-    .ending-card:hover.smombie { border-color: #9b59b6; }
+    .ending-card:hover.smombie { border-color: #023dff; }
     .ending-card:hover.lose { border-color: #2980b9; }
 
     .ending-battery {
@@ -437,7 +449,7 @@
     }
 
     .ending-card.win .ending-battery { color: var(--red); }
-    .ending-card.smombie .ending-battery { color: #9b59b6; }
+    .ending-card.smombie .ending-battery { color: #023dff; }
     .ending-card.lose .ending-battery { color: #2980b9; }
 
     .ending-title {
@@ -458,6 +470,7 @@
     /* ── TECH STACK ── */
     .tech {
       border-top: 1px solid var(--light-grey);
+      padding-top: 5rem;
     }
 
     .tech-grid {
@@ -638,13 +651,33 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes flicker {
-      0%, 95%, 100% { opacity: 1; }
-      96% { opacity: 0.3; }
-      97% { opacity: 1; }
-      98% { opacity: 0.5; }
-      99% { opacity: 1; }
-    }
+    @keyframes fadeUpRotate {
+      from { opacity: 0; transform: translateY(20px) rotate(-3deg); }
+      to { opacity: 1; transform: translateY(0) rotate(-3deg); }
+     }
+
+@keyframes flicker {
+  0%, 95%, 100% { 
+    opacity: 1; 
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6, 0 0 40px #9b59b6, 0 0 80px #6c3483;
+  }
+  96% { 
+    opacity: 0.3; 
+    text-shadow: none;
+  }
+  97% { 
+    opacity: 1; 
+    text-shadow: 0 0 10px #9b59b6, 0 0 30px #9b59b6, 0 0 60px #6c3483;
+  }
+  98% { 
+    opacity: 0.5; 
+    text-shadow: none;
+  }
+  99% { 
+    opacity: 1; 
+    text-shadow: 0 0 10px #9b59b6, 0 0 20px #9b59b6;
+  }
+}
 
     @keyframes scrollLine {
       0% { transform: scaleY(0); transform-origin: top; opacity: 1; }
@@ -654,8 +687,8 @@
     }
 
     @keyframes batteryDrain {
-      0% { width: 100%; background: linear-gradient(90deg, #00cc66, #00ff88); }
-      40% { width: 50%; background: linear-gradient(90deg, #ffaa00, #ffcc00); }
+      0% { width: 100%; background: linear-gradient(90deg, #55cfff, #0099ff); }
+      40% { width: 50%; background: linear-gradient(90deg, #4754fd, #1b1db6); }
       80% { width: 15%; background: linear-gradient(90deg, var(--dark-red), var(--red)); }
       90% { width: 0%; }
       100% { width: 0%; }
@@ -677,6 +710,40 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.5;
+}
+
+.hero-image-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 55%,
+    rgba(10,10,10,0.7) 80%,
+    rgba(10,10,10,1) 100%
+  );
+}
+
+.hero-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
   </style>
 </head>
 <body>
@@ -693,32 +760,35 @@
       <div class="music-bar" id="bar3"></div>
       <div class="music-bar" id="bar4"></div>
     </div>
-    <span class="music-label" id="musicLabel">Ambient</span>
+    <span class="music-label" id="musicLabel">SOUNDTRACK</span>
     <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
       <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor">
         <path d="M8 5v14l11-7z"/>
       </svg>
     </button>
     <audio id="bgMusic" loop>
-      <!-- Add your audio file here: <source src="audio/ambient.mp3" type="audio/mpeg"> -->
-      <!-- For now using a free ambient loop from a CDN -->
       <source src="audio/Gorilaaaazzz.wav" type="audio/wav">
     </audio>
   </div>
 
   <!-- HERO -->
-  <div class="hero">
-    <div class="hero-bg"></div>
-    <div class="scanlines"></div>
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="scanlines"></div>
 
-    <div class="hero-content">
-      <div class="hero-label">CTech Lab I — Final Project — Lynn Haag — 2026</div>
-      <h1 class="hero-title">
-        SMOMBIES<br><span class="amp">&</span><br>ZOMBIES
-      </h1>
-      <div class="hero-subtitle">A Virtual S-Bahn Ride · Meta Quest 3 · Unity 6</div>
+  <div class="hero-image-wrapper">
+    <img src="Smombieszene.png" alt="Smombies VS. Zombies" class="hero-image" />
+    <div class="hero-image-fade"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-label">CTech — First Term Project — Lynn Haag — 2026</div>
+    <h1 class="hero-title">
+      SMOMBIES<br><span class="amp">VS.</span><br>ZOMBIES
+    </h1>
+      <div class="hero-subtitle">A Virtual U-Bahn Ride · Meta Quest 3 · Unity 6</div>
       <p class="hero-tagline">
-        "Every now and then, it's worth looking up."
+        "Don't you dare to look up from your phone."
       </p>
       <div class="battery-deco">
         <span class="battery-label">Battery</span>
@@ -729,18 +799,19 @@
       </div>
     </div>
 
-    <div class="scroll-hint">
+<div class="scroll-hint">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
-  </div>
+  </div>              
+
 
   <!-- INTRO -->
   <section>
     <div class="intro reveal">
       <div class="intro-text">
         <div class="section-tag">About the project</div>
-        <h2 class="section-title">You are on the S-Bahn.</h2>
+        <h2 class="section-title">You are in Berlin. Riding the U8.</h2>
         <p>
           You hold a phone. The battery is draining. Around you, <strong>zombie-like figures stare</strong> — the Smombies. They approach when you look at them. They retreat when you look at your phone.
         </p>
@@ -778,17 +849,19 @@
       <div class="section-tag">Trailer</div>
       <h2 class="section-title">See it in action.</h2>
       <div class="video-wrapper">
-        <!-- Replace this src with your actual YouTube/Vimeo trailer URL -->
-        <!-- Example: src="https://www.youtube.com/embed/YOUR_VIDEO_ID" -->
-        <div class="video-placeholder">
-          <div class="video-placeholder-icon"></div>
-          <p>Trailer coming soon — replace with YouTube embed</p>
-        </div>
+<div class="video-placeholder">
+  <a href="https://youtu.be/efc4wJ1m8m4" 
+     target="_blank" 
+     class="btn btn-primary">
+    ▶ Watch on YouTube
+  </a>
+  <p>Full gameplay walkthrough — 4 minutes</p>
+</div>
       </div>
     </div>
   </div>
 
-  <!-- ENDINGS -->
+  <!-- ENDINGGGGS -->
   <section>
     <div class="endings reveal">
       <div class="section-tag">Three Endings</div>
@@ -849,8 +922,8 @@
           <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
         </svg>
       </a>
-      <a href="#" class="btn">
-        Documentation
+     <a href="https://github.com/haaglynnxctech2025/SmombiesVR/blob/main/projectdoc_haag.md" target="_blank" class="btn">
+  Documentation
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
           <polyline points="14 2 14 8 20 8"/>
@@ -861,7 +934,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Lynn Haag — CTech Lab I</p>
+    <p>© 2026 Lynn Haag — CTECH 2025/26 </p>
     <p>Smombies & Zombies — A Virtual S-Bahn Ride</p>
     <p><a href="https://github.com/haaglynnxctech2025/SmombiesVR" target="_blank">GitHub →</a></p>
   </footer>

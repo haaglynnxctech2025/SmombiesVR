@@ -16,6 +16,8 @@ Smombies & Zombies is a short first-person VR experience set inside a Berlin S-B
 
 Except you don't. At the end of the ride, you realise you have become one of them.
 
+**"Don't you dare to look up from your phone."**
+
 The project is built entirely in **Unity 6 (6000.0.62f1 LTS)** for **Meta Quest 3**, running as a standalone Android APK. The core stack is:
 
 - **Unity 6 + OpenXR / Oculus XR Plugin** — VR rendering and headset integration
@@ -242,8 +244,9 @@ The core MVP was functional by week four. The final features (ZombieDialog, phon
 
 ### Option 1 — Source Files (GitHub)
 
-The complete Unity project is available at:
-**[github.com/haaglynnxctech2025/SmombiesVR]** 
+The complete Unity project is available on GitHub:
+
+[View on GitHub](https://github.com/haaglynnxctech2025/SmombiesVR)
 
 The repository contains all Unity source files, C# scripts, assets, and scene files needed to open and build the project in Unity 6 (6000.0.62f1 LTS).
 
@@ -255,16 +258,22 @@ To run in the Unity Editor:
 5. Connect Meta Quest 3 via Link cable
 6. Press Play
 
-### Option 2 — APK (Sideload)
 
-A pre-built APK is available in the repository under `/Builds/SmombiesVR.apk`.
+### Option 2 — Visit the Website
 
-To install:
-1. Enable Developer Mode on Meta Quest 3
-2. Install SideQuest (sidequestvr.com)
-3. Connect Quest 3 via USB-C
-4. Drag APK onto SideQuest
-5. Find the app under Unknown Sources in the headset
+[Website] 
+
+### Option 3 — Find .APK file on OwnCloud
+
+[Find.APK] https://owncloud.gwdg.de/index.php/s/lkqKy0FHnFErEiY
+
+### Option 4 — Or just watch the Demo on YouTube!
+
+[Watch Trailer](https://youtu.be/efc4wJ1m8m4)
+
+
+
+
 
 ---
 
