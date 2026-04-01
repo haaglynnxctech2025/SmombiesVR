@@ -53,7 +53,9 @@ Related creative reference points include:
 - **Black Mirror (Season 1, Episode 2: "Fifteen Million Merits")** — compulsive media consumption as a dystopian loop
 - **Janet Cardiff's audio walks** — urban space as narrative medium
 - **Hito Steyerl's "In Free Fall"** — the smartphone screen as a new floor of reality
+- **Gorillaz "Clint Eastwood"** — This sond and the fictional characters that the band uses in a lot of different songs, served as really important inspirtion for my Zombies, also the music and the vibe I found fitted the world of the game and a Berlin street undergraound narrative of the 2000's!
 
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Gorillaz_Inspo.png)
 ---
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/Smombieszene.png)
 
@@ -81,15 +83,21 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - Gaze logic: zombies slowly approach when looked at, retreat when ignored
 - ZombieDialog system: closest zombie shows animated text dialogue at 1.5m proximity
 - Aggressive vs. normal animation frames triggered by distance
+
+---
+
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/MALE.png)
+
+---
 
 **Phone interaction:**
 - Custom 3D phone model (Blender)
 - World-space canvas with scrolling social media feed (83-frame PNG animation)
 - Phone flicker effect (red glow) when battery drops below 20%
 - First-person hand model (Blender, static pose)
-
+---
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/PHONE.png)
+---
 
 **UI and flow:**
 - Start scene with countdown (15s) and trigger-to-start
@@ -139,7 +147,8 @@ If I were to continue developing this project:
 - A companion app for the phone itself, blurring the boundary between the game and the player's real device
 
 ---
-
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/trainview.png)
+---
 ## Project Documentation
 
 ### Work Diary and Process
@@ -161,7 +170,7 @@ The final weeks were about deepening what existed rather than adding new systems
 
 - **Gaze logic through walls:** The GazeController raycast correctly uses a Zombie-only layer mask, but objects inside the train wagon still occasionally block the ray to further zombies. This is a known limitation of the current setup. A future fix would place the wagon walls on a non-blocking layer.
 
-- **VR UI buttons:** Significant time was spent trying to make a proper Ray Interactor-based UI button work in the Start Scene. This was eventually abandoned in favour of an AutoStart countdown with trigger-to-start. The lesson: VR UI interaction is one of the most complex parts of the XR Interaction Toolkit and deserves its own dedicated research sprint.
+- **VR UI buttons:** Many hours were spent trying to make a proper Ray Interactor-based UI button work in the Start Scene. This was eventually abandoned in favour of an AutoStart countdown with trigger-to-start. The lesson: VR UI interaction is one of the most complex parts of the XR Interaction Toolkit and deserves its own dedicated research sprint.
 
 - **Scale hell:** Every Blender model came into Unity at the wrong scale. The phone model, the hand model, the train wagon — all required manual scale correction. The solution (Apply All Transforms in Blender before exporting, Scale Factor adjustment in Unity) is now second nature, but cost days.
 
@@ -174,10 +183,10 @@ The visual language of the project — desaturated palette, red-tinted win scene
 The three-state ending system (Win/Smombie/Lose) is the core narrative innovation. The reversal — winning means losing yourself — is simple but the project was designed around it from the start. The zombie dialogue ("Put the phone down.", "We are the same.", "Or just keep scrolling.") reinforces the theme without explaining it.
 
 **Audio-Visual Design**
-Sound design from freesound.org (train ambience, zombie groans, tap click). Post-processing volumes in each scene create distinct moods. The phone flicker effect at low battery is a late addition that dramatically improves the tension of the final seconds.
+Sound design originally collected from freesound.org and my recording on berlin U-Bahn were mixed and put together in Ableton 12. Post-processing volumes in each scene create distinct moods. The phone flicker effect at low battery is a late addition that dramatically improves the tension of the final seconds. In the future I want to add even more sounds, also to the phone and make zombies talk more distictive, create their own language.
 
 **Software Development**
-All scripts written from scratch in C#. Key systems:
+All scripts are findable in the GitRepo SmombiesVR in Asseets/Scripts.
 - `BatteryManager.cs` — drain, add, colour interpolation
 - `GameManager.cs` — timer, end state routing
 - `PhoneTap.cs` — trigger, thumbstick, and gaze input combined
@@ -198,7 +207,7 @@ Extensive research into Unity 6 + Quest 3 compatibility. The Oculus XR Plugin vs
 Meta officially recommends Unity 6 with the Unity OpenXR Plugin as of their v74 SDK. Staying current seemed right for a new project.
 
 **Why 2.5D sprites and not 3D characters?**
-Time. Rigging and animating 3D humanoid characters was outside the scope of the MVP timeline. 2.5D sprites with billboard logic are a legitimate artistic choice and have precedent in VR art — they create a slightly unreal, dreamlike quality that suits the project's tone.
+Overall design and look of the world I wanted to create. Also Rigging and animating 3D humanoid characters was outside the scope of the MVP timeline and not really fitting to the surreal language. The 2.5D sprites with billboard logic are a legitimate artistic choice and have precedent in VR art — they create a slightly surreal, comices quality that suits the project's tone. This expressive illustrative style grew on me a lot during the process, because it very different than the well known meshy/voxel/pixelated 3D look, it can serve the message much better with less render capacities and therefore express more details.
 
 **Why a fixed-duration timer instead of a distance-based ride?**
 Simplicity. One variable (time) is easier to tune and test than a moving train position. The feeling of the train moving is created through scrolling textures, which decouples visual movement from game logic.
