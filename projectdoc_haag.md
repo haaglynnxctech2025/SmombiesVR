@@ -38,7 +38,7 @@ The project is built entirely in **Unity 6 (6000.0.62f1 LTS)** for **Meta Quest 
 - **2.5D Sprite Animation** — zombie characters rendered as animated PNG sequences on Billboard Quads
 - **Meta Quest 3 via USB Link** — PC VR streaming during development
 
-The scene consists of a single S-Bahn wagon with scrolling city textures outside the windows, animated zombie sprites seated and standing around the player, a world-space phone UI canvas with a scrolling social media feed, and a battery bar that slowly drains throughout the 60-second ride.
+The scene consists of a single U-Bahn wagon with scrolling city textures outside the windows, animated zombie sprites seated and standing around the player, a world-space phone UI canvas with a scrolling social media feed, and a battery bar that slowly drains throughout the 60-second ride.
 
 The game logic is built around a single variable — the battery level — which is drained over time, affected by gaze logic (looking at zombies drains it faster, looking at the phone partially restores it), and recharged by pressing the trigger or moving the thumbstick. At the end of the ride, the game checks the battery level and routes to one of three endings: Win (Zombie), Smombie (Half), or Lose (Resisted).
 
@@ -259,7 +259,7 @@ I had never made a VR project before, and I had never written much C# before eit
 
  The learning curve was steep and at times demoralising — especially the first week of just trying to see something in the headset. But the curve flattened, and by the final weeks, writing scripts, debugging gaze logic, and managing scene transitions felt like a real accomplishment. When I added music and animations I became more confident and developed a smoother workflow to add more variety and depth to every scene. But once I fixed something, another issue would come up. So in the end there is still a lot I want to fix and improve. The worlds are not as polished as I had hoped for the final MVP, but time simply ran out. In the end I had a lot of fun designing the overall look and the comic mood of the world — and bringing it all together on the finished website.
 
-The most difficult part were all the technical problems where i hot stuck and lost some time that I just didn't have. Knowing when to stop debugging one thing and move to the nextwas a big learning. And knowing when good enough was actually good enough. This project taught me a lot about how to make that call, even it when something was still not working perfectly.
+The most difficult part were all the technical problems where I got stuck and lost some time that I just didn't have. Knowing when to stop debugging one thing and move to the next was a big learning. And knowing when good enough was actually good enough. This project taught me a lot about how to make that call, even it when something was still not working perfectly.
 
 What I learned, concretely:
 - Unity scene management and VR setup from scratch
@@ -273,7 +273,7 @@ What I learned, concretely:
 - building a world around a socio-political idea and making use of game mechanics
 - Website workflows and mechanics and scripting them
 
-### Original Timeline vs Reality
+### Original Timeline vs. Reality
 
 The original plan scheduled four weeks of work in two phases. In practice, work was distributed unevenly — slow starts, late-night sprints, a few days completely lost to a single bug. Also I lost a huge amount of time trying to keep my agency job to be able to afford the studies. I was under a lot of pressure to begin with and used my vacation for the execution of the firstterm project. So The final three weeks I worked very long hours and some nightshifts, but they were the most productive.
 
