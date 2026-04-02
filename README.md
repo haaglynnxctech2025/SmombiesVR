@@ -2,7 +2,7 @@
 
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Webview.png)
 
-Smombies & Zombies is a short first-person VR experience set inside a Berlin U-Bahn. You sit in the train. In your hand is a phone. Around you, zombie-like figures mosy around. But when you look up from the phone and your eyes accidently meet one o the characters, they feel drawn towards you and actually approach you. So the game gives you a mechanic: keep the phone's battery alive. Tap the trigger. Keep scrolling. Arrive at the destination, engaged in your phone — and you everything is fine?
+Smombies & Zombies is a short first-person VR experience set inside a Berlin U-Bahn. You sit in the train. In your hand is a phone. Around you, zombie-like figures mosy around. But when you look up from the phone and your eyes accidently meet one o the characters, they feel drawn towards you and actually approach you. So the game gives you a mechanic: keep the phone's battery alive. Tap the trigger. Keep scrolling. Arrive at the destination, engaged in your phone — and everything is fine?
 
 No, it's not. At the end of the ride, you realise you have become one of them.
 
