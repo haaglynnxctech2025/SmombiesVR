@@ -51,7 +51,7 @@ The term **"Smombie"** — a portmanteau of "Smartphone" and "Zombie" — was vo
 
 The inspiration for this project comes from personal experience. After years of commuting on Berlin's S- and U-Bahn, I noticed something in myself: small social interactions — eye contact, a smile, a nod — started to feel uncomfortable. Using my phone felt safe. Familiar. Easy. The discomfort of shared public space was easier to avoid than to sit with.
 
-There's also a deeper layer to this. As a woman, a phone is sometimes a shield — a way to seem unavailable, unapproachable, busy. It's protection. But it also creates distance from the world. It can drive a wedge between generations and social groups — the young, permanently-connected user and everyone else who still shows up in shared space.
+There's also a deeper layer to this. For someone, a phone is sometimes a shield — a way to seem unavailable, unapproachable, busy. It's protection. But it also creates distance from the world. It can drive a wedge between generations and social groups — the young, permanently-connected user and everyone else who still shows up in shared space.
 
 The project does not judge smartphone users. It participates in the behaviour it critiques — you play as a scroller, and the game rewards you for scrolling. The twist at the end is not punishment. It's recognition.
 
@@ -70,7 +70,6 @@ Related creative reference points include:
 
 ### What was built
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Smombieszene.png)
 
 The final deliverable is a functional standalone VR experience playable on Meta Quest 3:
 
@@ -93,7 +92,7 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - ZombieDialog system: closest zombie shows animated text dialogue at 1.5m proximity
 - Aggressive vs. normal animation frames triggered by distance
 
----
+
 
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/MALE.png)
 
@@ -104,7 +103,7 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - World-space canvas with scrolling social media feed (83-frame PNG animation)
 - Phone flicker effect (red glow) when battery drops below 20%
 - First-person hand model (Blender, static pose)
----
+
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/PHONE.png)
 ---
 
@@ -116,33 +115,38 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 
 **Audio:**
 - Ambient train sound loop
+- Ambient Outside sound loop
+- Start scene sound loop
+- Bus-stop sound loop
+- Scrary underworld sound loop
 - Zombie spatial audio (3D, proximity-based)
-- Phone tap click sound
 
----
 
 ## Discussion of Results
 
-This project surprised me in how much it delivered, and in how much it resisted delivery.
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Smombieszene.png)
 
-The core mechanic works. The battery tension is real. Testing with other people — watching them reflexively tap the trigger, watching their battery creep up, watching them arrive at the WinScene and see the word "Zombie" — produced exactly the reaction I hoped for. A beat of confusion. Then a laugh. Then something quieter.
+This project surprised me in how much can be delivered in Unity. And I still feel like I barely scratched the surface.
+
+The core mechanic works. The battery tension is there. Testing with other people — watching them reflexively tap the trigger, watching their battery creep up, watching them arrive at the WinScene and see the word "Zombie" — will produce some kind of reaction, and I'm very curious about it. A beat of confusion. Then a laugh. Then something quieter.
 
 The gaze logic adds a dimension I didn't expect to be so effective. When a zombie starts approaching because you looked at it — and the battery starts draining faster — the instinct to look back at the phone is immediate and visceral. The mechanics do the philosophical work without explanation.
 
-What didn't fully land: the Smombie scene decision mechanic came late in development and feels undercooked. The two choices (trigger = zombie, thumbstick = resist) are correct narratively but underdeveloped visually. Given more time, I'd build this into a proper dialogue moment with the zombie.
+What didn't fully land: the Smombie scene decision mechanic came late in development and feels still a bit undercooked. The two choices (trigger = zombie, thumbstick = resist) are correct narratively but underdeveloped visually. Given more time, I'd build this into a proper dialogue moment with the zombie.
 
-The hand model integration was technically the most painful part of the project. Blender-to-Unity scale and transform issues consumed several days. The phone flicker effect was a last-minute addition that ended up being one of the most visually striking moments.
+The hand model integration was technically, next to exporting the .APK and getting the Quest03 working, the most painful part of the project. Blender-to-Unity scale and transform issues consumed several days. The phone flicker effect was a last-minute addition that ended up being one of the most visually striking moments.
 
----
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/GUTE.png)
+
 
 ## Next Steps and Future Work
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/GUTE.png)
+
 
 If I were to continue developing this project:
 
 **Short term:**
 - Proper Smombie scene with zombie dialogue and interactive choice UI
-- More diverse zombie characters with individual dialogue sets
+- Even more diverse zombie characters with individual dialogue sets and stories
 - Haptic feedback when battery is low or zombie approaches
 
 **Medium term:**
@@ -152,13 +156,14 @@ If I were to continue developing this project:
 
 **Long term:**
 - Real-time dynamic battery affected by multiple simultaneous zombies
+- In-depth polished surroundings and further developed narrative with more interactions and descion-making stations
 - Hand tracking (no controller) — scrolling with physical finger gestures
-- Installation version for public display in actual S-Bahn settings
+- Installation version for public display in actual U-Bahn settings with pass-through AR on an actual phone (maybe)
 - A companion app for the phone itself, blurring the boundary between the game and the player's real device
 
----
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/trainview.png)
----
+
+
 ## Project Documentation
 
 ### Work Diary and Process
@@ -217,7 +222,7 @@ Extensive research into Unity 6 + Quest 3 compatibility. The Oculus XR Plugin vs
 Meta officially recommends Unity 6 with the Unity OpenXR Plugin as of their v74 SDK. Staying current seemed right for a new project.
 
 **Why 2.5D sprites and not 3D characters?**
-Overall design and look of the world I wanted to create. Also Rigging and animating 3D humanoid characters was outside the scope of the MVP timeline and not really fitting to the surreal language. The 2.5D sprites with billboard logic are a legitimate artistic choice and have precedent in VR art — they create a slightly surreal, comices quality that suits the project's tone. This expressive illustrative style grew on me a lot during the process, because it very different than the well known meshy/voxel/pixelated 3D look, it can serve the message much better with less render capacities and therefore express more details.
+Overall design and look of the world I wanted to create. Also Rigging and animating 3D humanoid characters was outside the scope of the MVP timeline and not really fitting to the surreal language. The 2.5D sprites with billboard logic are a legitimate artistic choice and have precedent in VR art — they create a slightly surreal, comicesque quality that suits the project's tone. This expressive illustrative style grew on me a lot during the process, because it very different than the well known meshy/voxel/pixelated 3D look, it can serve the message much better with less render capacities and therefore express more details.
 
 **Why a fixed-duration timer instead of a distance-based ride?**
 Simplicity. One variable (time) is easier to tune and test than a moving train position. The feeling of the train moving is created through scrolling textures, which decouples visual movement from game logic.
@@ -250,9 +255,9 @@ The project is complete as a VR experience. It communicates the core message and
 
 ### Challenge of Comfort Zone
 
-I had never made a VR project before and also I`had never scrpted a lot of C# before. I still had to get comfortable with the Git and Unity workflow, also Unity as a program wasreally new to me and I had to watch a lot of tutorials and use Claude for help with some a lot of the scripts.
+I had never made a VR project before, and I had never written much C# before either. I still had to get comfortable with the Git and Unity workflow — Unity as a program was also completely new to me, and I had to watch a lot of tutorials and use Claude for help with many of the scripts.
 
- The learning curve was hard to climb and at times demoralising — especially the first week of just trying to see something in the headset. But the curve flattened, and by the final weeks, writing scripts, debugging gaze logic, and managing scene transitions felt like i had actually acomplished something. When I added music and a lot of the animations I became more confident and developed a smooth workflow to add more variety and depth to every scene. but once i fixed something,some other mistake came up. So in the end there is still a lot that I want to fix and improve. The worlds are not as polished as I hoped for the final MaxVp but the time was just not enough. In the end I had a lot of fun designing the overall look and the comic mood of the world and applying it all to the finished website in the end.
+ The learning curve was steep and at times demoralising — especially the first week of just trying to see something in the headset. But the curve flattened, and by the final weeks, writing scripts, debugging gaze logic, and managing scene transitions felt like a real accomplishment. When I added music and animations I became more confident and developed a smoother workflow to add more variety and depth to every scene. But once I fixed something, another issue would come up. So in the end there is still a lot I want to fix and improve. The worlds are not as polished as I had hoped for the final MVP, but time simply ran out. In the end I had a lot of fun designing the overall look and the comic mood of the world — and bringing it all together on the finished website.
 
 The most difficult part were all the technical problems where i hot stuck and lost some time that I just didn't have. Knowing when to stop debugging one thing and move to the nextwas a big learning. And knowing when good enough was actually good enough. This project taught me a lot about how to make that call, even it when something was still not working perfectly.
 
@@ -272,9 +277,9 @@ What I learned, concretely:
 
 The original plan scheduled four weeks of work in two phases. In practice, work was distributed unevenly — slow starts, late-night sprints, a few days completely lost to a single bug. Also I lost a huge amount of time trying to keep my agency job to be able to afford the studies. I was under a lot of pressure to begin with and used my vacation for the execution of the firstterm project. So The final three weeks I worked very long hours and some nightshifts, but they were the most productive.
 
-The core MVP was functional by week four. The final features (ZombieDialog, phone model, Smombie decision, sound design) were built in week five and six. The project submitted is richer than the plan described, and also more honest about what was dropped, so I am happy abput that at least !
+The core MVP was functional by week four. The final features (ZombieDialog, phone model, Smombie decision, sound design) were built in week five and six. The project submitted is richer than the plan described, and also more honest about what was dropped, so I am happy about that at least !
 
----
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/DOOM.png)
 
 ## How to Access and Run the Project
 
