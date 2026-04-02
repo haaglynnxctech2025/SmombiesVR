@@ -302,7 +302,7 @@ To run in the Unity Editor:
 
 ### Option 2 — Visit the Website
 
-[Website] 
+[Website](https://smombies-vr.vercel.app/)
 
 ### Option 3 — Find .APK file on OwnCloud
 
