@@ -1,6 +1,6 @@
 
 ### Final Project Documentation — 
-*Lynn Haag | Berlin, March 2026**
+Lynn Haag | Berlin, March 2026**
 
 ---
 
