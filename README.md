@@ -9,7 +9,7 @@ No, it's not. At the end of the ride, you realise you have become one of them.
 **"Don't you dare to look up from your phone."**
 
 
-*"Of course, safety comes first — especially at night or as a woman alone, a phone can serve as a shield: look busy, seem unapproachable, avoid unwanted interaction. But it can also drive a wedge between generations and social groups — the young, smartphone-dependent user and everyone else who shapes the urban landscape. Every now and then, it's worth looking up. To notice what's actually reflect on what's happening around you — whether the environment has a good or a bad influence on you."*
+*"Of course, safety comes first — especially at night or as a woman alone, a phone can serve as a shield: look busy, seem unapproachable, avoid unwanted interaction. But it can also drive a wedge between generations and social groups — the young, smartphone-dependent user and everyone else who shapes the urban landscape. Every now and then, it's worth looking up. To actually reflect on what's happening around you — whether the environment has a good or a bad influence on you."*
 
 
 ## How to Access and Run the Project
