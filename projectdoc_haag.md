@@ -1,27 +1,34 @@
-git ad# Smombies & Zombies — A Virtual Train Ride
+
 ### Final Project Documentation — 
-**Lynn Haag | Berlin, March 2026**
+*Lynn Haag | Berlin, March 2026**
 
 ---
 
 ## Title
 
-**Smombies & Zombies** — *A Virtual Train Ride*
+# Smombies & Zombies — *A Virtual U-Bahn Ride*
 
 ---
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Endszene.png)
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/SCROLL.png)
 
 
 ## Description of Content and Technical Implementation
 
-Smombies & Zombies is a short first-person VR experience set inside a Berlin S-Bahn. You sit in the train. In your hand is a phone. Around you, zombie-like figures stand, stare, and slowly approach. The game gives you one mechanic: keep the phone's battery alive. Tap the trigger. Keep scrolling. Arrive at the destination with a full battery — and you win.
+Smombies & Zombies is a short first-person VR experience set inside a Berlin S-Bahn. You sit in U8. In your hand is a phone. Around you, zombie-like figures stand, stare, and slowly approach. The game gives you a  mechanic: keep the phone's battery alive. Tap the trigger. Keep scrolling. Arrive at the destination with a full battery — and you win.
 
 Except you don't. At the end of the ride, you realise you have become one of them.
 
 **"Don't you dare to look up from your phone."**
 
-![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/SCROLL.png)
+The player isn't introduced completely to how the mechanics work — but that's the trick. The player has to self-reflect and maybe ride more than once to play through all three scenarios and understand what the narrative of the game is all about. The player can take away whatever they like: whether it is to stay safe on the phone or to engage and listen to what the figures have to say. It is completely up to the player. The message of the game is still clear — wherever you are on earth, it's good to realise what the environment tries to tell you, and not to look away or hide in social feed rabbit holes for hours on end, turning away from all the good or bad things that are happening around us in this moment.
 
+---
+
+*"Of course, safety comes first — especially at night or as a woman alone, a phone can serve as a shield: look busy, seem unapproachable, avoid unwanted interaction. But it can also drive a wedge between generations and social groups — the young, smartphone-dependent user and everyone else who shapes the urban landscape. Every now and then, it's worth looking up. To notice what's actually reflect on what's happening around you — whether the environment has a good or bad influence on you."*
+
+---
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Endszene.png)
+---
 The project is built entirely in **Unity 6 (6000.0.62f1 LTS)** for **Meta Quest 3**, running as a standalone Android APK. The core stack is:
 
 - **Unity 6 + OpenXR / Oculus XR Plugin** — VR rendering and headset integration
@@ -36,7 +43,7 @@ The scene consists of a single S-Bahn wagon with scrolling city textures outside
 The game logic is built around a single variable — the battery level — which is drained over time, affected by gaze logic (looking at zombies drains it faster, looking at the phone partially restores it), and recharged by pressing the trigger or moving the thumbstick. At the end of the ride, the game checks the battery level and routes to one of three endings: Win (Zombie), Smombie (Half), or Lose (Resisted).
 
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/GameMechanic.png)
----
+
 
 ## Context and Related Work
 
@@ -50,14 +57,14 @@ The project does not judge smartphone users. It participates in the behaviour it
 
 Related creative reference points include:
 - **Ingress / Pokémon GO** — augmented reality that brings attention back to physical space
-- **Black Mirror (Season 1, Episode 2: "Fifteen Million Merits")** — compulsive media consumption as a dystopian loop
+- **Black Mirror (Season 1, Episode 2: "Fifteen Million Merits"/Season 2)** — compulsive media consumption as a dystopian loop
 - **Janet Cardiff's audio walks** — urban space as narrative medium
 - **Hito Steyerl's "In Free Fall"** — the smartphone screen as a new floor of reality
-- **Gorillaz "Clint Eastwood"** — This sond and the fictional characters that the band uses in a lot of different songs, served as really important inspirtion for my Zombies, also the music and the vibe I found fitted the world of the game and a Berlin street undergraound narrative of the 2000's!
+- **Gorillaz "Clint Eastwood"** — This song and the fictional characters that the band uses across many of their songs served as a really important inspiration for my zombies. The music and the vibe felt like a perfect fit for the world of the game and the underground Berlin street narrative of the 2000s.
 
----
+
 ![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/Gorillaz_Inspo.png)
----
+
 
 ## Results
 
@@ -75,7 +82,7 @@ The final deliverable is a functional standalone VR experience playable on Meta 
 - Three end states: Win (>90% battery = Zombie), Smombie (1–89%), Lose (0%)
 
 **Environment:**
-- Custom 3D S-Bahn wagon (Blender FBX import)
+- 3D U-Bahn wagon (Blender FBX import)
 - Scrolling city texture outside windows (ScrollTexture.cs)
 - Train front and back illustrated planes for the illusion of a full train
 - Directional light, post-processing (vignette, colour grading) for atmosphere
@@ -127,6 +134,7 @@ What didn't fully land: the Smombie scene decision mechanic came late in develop
 The hand model integration was technically the most painful part of the project. Blender-to-Unity scale and transform issues consumed several days. The phone flicker effect was a last-minute addition that ended up being one of the most visually striking moments.
 
 ---
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/GUTE.png)
 
 ## Next Steps and Future Work
 
@@ -179,7 +187,7 @@ The final weeks were about deepening what existed rather than adding new systems
 ### Categories of Work
 
 **Creative / Artistic Development**
-The visual language of the project — desaturated palette, red-tinted win scene, 2.5D zombie sprites, scrolling social feed — was developed iteratively. The aesthetic owes something to Berlin's actual S-Bahn light, which is grey and flat and slightly hostile.
+The visual language of the project — Comics of the 2000s, risograph, colorful and deeply layered, 2.5D zombie sprites, scrolling social feed — was developed instinctively. The aesthetic owes something to Berlin's actual U-Bahn and underground scene, vibrant and very crazy, sometimes incredebly depressing, leaving the impression of inheriting many lost souls. But the comic look makes it  little old school, remebering better times in Berlin and in general. 
 
 **Narrative Development**
 The three-state ending system (Win/Smombie/Lose) is the core narrative innovation. The reversal — winning means losing yourself — is simple but the project was designed around it from the start. The zombie dialogue ("Put the phone down.", "We are the same.", "Or just keep scrolling.") reinforces the theme without explaining it.
@@ -217,7 +225,10 @@ Simplicity. One variable (time) is easier to tune and test than a moving train p
 **What would I do differently?**
 Start with hand tracking research earlier. Spend less time on environment polish in the first week. Build the Win/Lose scene routing on day two, not week three — having the full loop functional early makes everything else easier to evaluate.
 
+---
 ### Reflection on MVP vs Best Case
+
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/TRAIN.png)
 
 The original project plan described three states:
 - **Baseline:** One room, phone UI, battery bar, one static zombie, two end states
@@ -226,23 +237,24 @@ The original project plan described three states:
 The delivered project exceeds the baseline in almost every dimension and reaches or approaches the best case in several:
 - ✅ Multiple animated zombie sprites
 - ✅ Gaze logic (not the full proximity AI from the best case, but functional and expressive)
-- ✅ Dialogue system (implemented, though simpler than planned)
+- ✅ Dialogue system (implemented, though a little simpler and only one-sided, for the MaxVP I want a lot more interaction and engagement for player vs. zombie)
 - ✅ Three end states (Win/Smombie/Lose — plus a decision moment in the Smombie scene)
 - ✅ Phone scrolling animation
 - ✅ Hand model
 - ❌ Full NavMesh NPC movement
 - ❌ Hand tracking
-- ❌ Mirror reveal animation in Win scene
 
-The project is complete as a VR experience. It communicates its message. It functions on hardware. It has a beginning, a middle, and three possible endings.
+The project is complete as a VR experience. It communicates the core message and it finally functions on hardware. It has a beginning, a middle, and three possible endings.
+
+
 
 ### Challenge of Comfort Zone
 
-I had never made a VR project before. I had never written a line of C# before. I had never used Unity for anything more than opening a tutorial project. I had never used Git seriously.
+I had never made a VR project before and also I`had never scrpted a lot of C# before. I still had to get comfortable with the Git and Unity workflow, also Unity as a program wasreally new to me and I had to watch a lot of tutorials and use Claude for help with some a lot of the scripts.
 
-All of that changed. The learning curve was steep and at times demoralising — especially the first week of just trying to see something in the headset. But the curve flattened, and by the final weeks, writing scripts, debugging gaze logic, and managing scene transitions felt natural.
+ The learning curve was hard to climb and at times demoralising — especially the first week of just trying to see something in the headset. But the curve flattened, and by the final weeks, writing scripts, debugging gaze logic, and managing scene transitions felt like i had actually acomplished something. When I added music and a lot of the animations I became more confident and developed a smooth workflow to add more variety and depth to every scene. but once i fixed something,some other mistake came up. So in the end there is still a lot that I want to fix and improve. The worlds are not as polished as I hoped for the final MaxVp but the time was just not enough. In the end I had a lot of fun designing the overall look and the comic mood of the world and applying it all to the finished website in the end.
 
-The most difficult part was not any single technical problem. It was time management: knowing when to stop debugging one thing and move to the next. Knowing when good enough was actually good enough. This project taught me to make that call.
+The most difficult part were all the technical problems where i hot stuck and lost some time that I just didn't have. Knowing when to stop debugging one thing and move to the nextwas a big learning. And knowing when good enough was actually good enough. This project taught me a lot about how to make that call, even it when something was still not working perfectly.
 
 What I learned, concretely:
 - Unity scene management and VR setup from scratch
@@ -251,12 +263,16 @@ What I learned, concretely:
 - Blender to Unity asset pipeline
 - XR Interaction Toolkit architecture
 - The difference between a great idea and a buildable idea
+- designing characters and using AI workflows
+- animating 2.5D characters in Unity
+- building a world around a socio-political idea and making use of game mechanics
+- Website workflows and mechanics and scripting them
 
 ### Original Timeline vs Reality
 
-The original plan scheduled four weeks of work in two phases. In practice, work was distributed unevenly — slow starts, late-night sprints, a few days completely lost to a single bug. The final two weeks were the most productive.
+The original plan scheduled four weeks of work in two phases. In practice, work was distributed unevenly — slow starts, late-night sprints, a few days completely lost to a single bug. Also I lost a huge amount of time trying to keep my agency job to be able to afford the studies. I was under a lot of pressure to begin with and used my vacation for the execution of the firstterm project. So The final three weeks I worked very long hours and some nightshifts, but they were the most productive.
 
-The core MVP was functional by week four. The final features (ZombieDialog, phone model, Smombie decision, sound design) were built in week five and six. The project submitted is richer than the plan described, and also more honest about what was dropped.
+The core MVP was functional by week four. The final features (ZombieDialog, phone model, Smombie decision, sound design) were built in week five and six. The project submitted is richer than the plan described, and also more honest about what was dropped, so I am happy abput that at least !
 
 ---
 
@@ -292,12 +308,8 @@ To run in the Unity Editor:
 [Watch Trailer](https://youtu.be/efc4wJ1m8m4)
 
 
+![Screenshot](https://raw.githubusercontent.com/haaglynnxctech2025/SmombiesVR/main/img/SmombieSzene02.png)
 
-
-
----
-
-*"Of course, safety comes first — especially at night or as a woman alone, a phone can serve as a shield: look busy, seem unapproachable, avoid unwanted interaction. But it can also drive a wedge between generations and social groups — the young, smartphone-dependent user and everyone else who shapes the urban landscape. Every now and then, it's worth looking up. To notice what's actually happening around you — whether the environment is good or bad."*
 
 ---
 
